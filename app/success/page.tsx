@@ -4,6 +4,7 @@ import { useEffect, useState, Suspense } from 'react';
 import { useSearchParams } from 'next/navigation';
 import Link from 'next/link';
 import KashmirLeaves from '@/components/KashmirLeaves';
+import Footer from '@/components/Footer';
 
 function SuccessContent() {
   const searchParams = useSearchParams();
@@ -252,46 +253,10 @@ function SuccessContent() {
             </div>
           </div>
 
-          {/* Website Developer Section */}
-          <div className="mt-8 max-w-2xl mx-auto">
-            <div className="bg-gradient-to-br from-slate-800/60 to-slate-900/60 backdrop-blur-sm rounded-xl p-6 border border-slate-700/50">
-              <div className="flex items-center justify-between flex-wrap gap-4">
-                <div>
-                  <p className="text-slate-400 text-sm mb-2">Website Developed By</p>
-                  <div className="flex items-center gap-3">
-                    <div>
-                      <p className="text-white font-bold text-lg">Usama Javed</p>
-                      <p className="text-slate-400 text-sm">Full Stack Developer</p>
-                    </div>
-                  </div>
-                </div>
-                <div className="flex gap-3 flex-wrap">
-                  <a
-                    href="https://www.instagram.com/hellofromusama/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-pink-500/20 to-purple-500/20 hover:from-pink-500/30 hover:to-purple-500/30 rounded-lg border border-pink-500/30 hover:border-pink-500/50 transition-all"
-                    title="Follow on Instagram"
-                  >
-                    <span className="text-xl">📱</span>
-                    <span className="text-white text-sm font-medium">@hellofromusama</span>
-                  </a>
-                  <a
-                    href="https://usamajaved.com.au"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center gap-2 px-4 py-2 bg-slate-700/50 hover:bg-slate-700 rounded-lg border border-slate-600 hover:border-slate-500 transition-all"
-                    title="Visit Portfolio"
-                  >
-                    <span className="text-xl">🌐</span>
-                    <span className="text-white text-sm font-medium">usamajaved.com.au</span>
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
+
+      <Footer />
     </div>
   );
 }
