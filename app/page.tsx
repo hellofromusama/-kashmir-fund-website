@@ -119,6 +119,42 @@ export default function FundKashmirPage() {
           </div>
         </div>
 
+        {/* Prominent Overseas Help Message */}
+        <div className="max-w-6xl mx-auto px-4 py-6">
+          <div className="bg-gradient-to-r from-red-600/30 to-orange-600/30 border-2 border-red-500/60 rounded-2xl p-6 md:p-8 backdrop-blur-sm shadow-2xl">
+            <div className="flex items-center gap-4 mb-4">
+              <span className="text-4xl md:text-5xl">🆘</span>
+              <h2 className="text-2xl md:text-3xl font-bold text-red-300">Urgent Appeal</h2>
+            </div>
+            <p className="text-xl md:text-2xl font-bold text-white mb-3">
+              We need help from overseas people to help the Kashmiri people on protest
+            </p>
+            <p className="text-base md:text-lg text-slate-200 mb-4">
+              The people of Azad Kashmir are protesting for their basic rights and facing severe repression. Your international support can provide critical aid and raise awareness about their struggle for justice.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link
+                href="/blog"
+                className="bg-white hover:bg-slate-100 text-red-600 px-6 py-3 rounded-lg font-bold text-center transition-all duration-300 transform hover:scale-105"
+              >
+                📰 Read About the Protests
+              </Link>
+              <button
+                onClick={() => {
+                  const amountInput = document.querySelector('input[type="number"]') as HTMLInputElement;
+                  if (amountInput) {
+                    amountInput.focus();
+                    amountInput.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                  }
+                }}
+                className="bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-bold text-center transition-all duration-300 transform hover:scale-105"
+              >
+                💚 Donate Now
+              </button>
+            </div>
+          </div>
+        </div>
+
         <div className="max-w-6xl mx-auto px-4 py-8">
           {/* Crisis Information */}
           <div className="mb-8 bg-gradient-to-br from-slate-800/80 to-slate-900/80 backdrop-blur-sm rounded-xl p-6 border border-slate-700">
